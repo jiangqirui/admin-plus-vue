@@ -11,13 +11,12 @@
         </el-form>
 
         <div class="el-from-btn">
-            <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
+            <el-button type="primary" @click="submit()">登录</el-button>
         </div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
     name: "Login",
@@ -38,14 +37,19 @@ export default {
         }
     },
     methods: {
-        submitForm(formName) {
-            this.$refs[formName].validate((valid) => {
+        submit() {
+            this.$refs["loginForm"].validate((valid) => {
                 if (valid) {
                     console.log("验证成功！")
 
-                    axios.post("", {}, function (response) {
-
+                    const url = "";
+                    const data = {};
+                    this.axios.post(url, data).then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.log(error);
                     });
+
                 } else {
                     console.log("验证失败！")
                     return false;
