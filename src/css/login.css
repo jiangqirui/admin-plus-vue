@@ -1,0 +1,28 @@
+.login_container {
+    width: 380px;
+    height: 300px;
+    background-color: rgba(194, 194, 194, 0.93);
+    position: absolute;
+    right: 10%;
+    top:  25%;
+}
+
+.login_header {
+    width: 100%;
+    line-height: 80px;
+    height: 80px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login_form {
+    margin-right: 40px;
+}
+
+.el-from-btn {
+    width: 100%;
+}
+
+.el-form-item.is-required:not(.is-no-asterisk) > .el-form-item__label:before {
+    display: none;
+}
